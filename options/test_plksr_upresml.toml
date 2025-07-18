@@ -1,0 +1,21 @@
+# Results will be saved to neosr/experiments/results/
+
+name = "test_plksr"
+model_type = "image"
+scale = 2
+#use_amp = true
+#compile = true
+
+[datasets.test_1]
+name = "test_1"
+type = "single"
+dataroot_lq = '/teamspace/studios/upres-ml-dataset-small/sr_dataset/test/LR'
+[val]
+#tile = 200
+
+[network_g]
+type = "plksr"
+#type = "plksr_tiny"
+
+[path]
+pretrain_network_g = '/teamspace/studios/this_studio/neosr/experiments/train_plksr/models/net_g_40000.pth'

@@ -1,0 +1,73 @@
+name = "train_plksr"
+model_type = "image"
+scale = 2
+use_amp = true
+bfloat16 = true
+fast_matmul = true
+#compile = true
+
+[datasets.train]
+type = "paired"
+dataroot_gt = '/teamspace/studios/upres-ml-dataset-small/sr_dataset/train_lmdb/train_HR.lmdb'
+dataroot_lq = '/teamspace/studios/upres-ml-dataset-small/sr_dataset/train_lmdb/train_LR.lmdb'
+patch_size = 48
+batch_size = 16
+accumulate = 1
+hflip = true
+rotation = true
+num_worker_per_gpu = "auto"
+prefetch_factor = 2  # Number of batches loaded in advance per worker
+pin_memory = true   # Pins CPU memory for faster transfer to GPU
+persistent_workers = true  # Keeps workers alive between iterations
+
+[datasets.val]
+name = "val"
+type = "paired"
+dataroot_gt = '/teamspace/studios/upres-ml-dataset-small/sr_dataset/val/HR'
+dataroot_lq = '/teamspace/studios/upres-ml-dataset-small/sr_dataset/val/LR'
+
+[val]
+val_freq = 5000
+
+[network_g]
+type = "plksr"
+
+[network_d]
+type = "metagan"
+
+[train]
+ema = 0.999
+wavelet_guided = true
+wavelet_init = 80000
+
+[train.optim_g]
+type = "adam"
+lr = 2e-4
+betas = [ 0.9, 0.99 ]
+
+[train.optim_d]
+type = "adam"
+lr = 1e-4
+betas = [ 0.9, 0.99 ]
+
+# Enable these losses to satisfy NeoSR's requirements
+# L1 loss (primary loss in the paper)
+[train.l1_opt]
+type = "l1_loss"
+loss_weight = 1.0
+
+# Include mssim as a pixel loss to satisfy the error message
+[train.mssim_opt]
+type = "mssim_loss"
+loss_weight = 0.1  # Keep weight low to prioritize L1 loss
+
+# Keep adversarial loss (GAN)
+[train.gan_opt]
+type = "gan_loss"
+gan_type = "bce"
+loss_weight = 0.3
+
+[logger]
+total_iter = 450000
+save_checkpoint_freq = 5000
+use_tb_logger = true

@@ -1,0 +1,21 @@
+# Results will be saved to neosr/experiments/results/
+
+name = "test_plksr_reds_165k"
+model_type = "image"
+scale = 2
+#use_amp = true
+#compile = true
+
+[datasets.test_1]
+name = "test_1"
+type = "single"
+dataroot_lq = '/teamspace/studios/reds-dataset/combined_dataset'
+[val]
+#tile = 200
+
+[network_g]
+type = "plksr"
+#type = "plksr_tiny"
+
+[path]
+pretrain_network_g = '/teamspace/studios/this_studio/neosr/experiments/train_plksr/models/net_g_165000.pth'

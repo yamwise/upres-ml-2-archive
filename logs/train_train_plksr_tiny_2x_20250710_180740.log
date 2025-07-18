@@ -1,0 +1,28 @@
+2025-07-10 18:07:40,168 INFO: 
+------------------------ neosr ------------------------
+Pytorch Version: 2.5.1+cu124. Running on gpu NVIDIA L4, with driver 535.247.01.
+2025-07-10 18:07:42,037 INFO: Dataset [paired] is built.
+2025-07-10 18:07:42,041 INFO: Training informations:
+-------- Starting model: train_plksr_tiny_2x
+-------- GPUs detected: 1
+-------- Patch size: 32
+-------- Dataset size: 1365
+-------- Batch size per gpu: 4
+-------- Accumulated batches: 4
+-------- Required iters per epoch: 342
+-------- Total epochs 1316 for total iters 450000.
+2025-07-10 18:07:42,182 INFO: Dataset [paired] is built.
+2025-07-10 18:07:42,183 INFO: Number of val images/folders: 162
+2025-07-10 18:07:42,503 INFO: Using network [plksr].
+2025-07-10 18:07:42,675 INFO: Using network [metagan].
+2025-07-10 18:07:42,796 INFO: Loading plksr model from /teamspace/studios/this_studio/neosr/experiments/train_plksr_tiny_2x/models/net_g_120000.pth, with param key: [params].
+2025-07-10 18:07:43,269 INFO: Loading metagan model from /teamspace/studios/this_studio/neosr/experiments/train_plksr_tiny_2x/models/net_d_120000.pth, with param key: [params].
+2025-07-10 18:07:43,779 INFO: Using exponential-moving average.
+2025-07-10 18:07:44,092 INFO: Loss [mssim_loss] enabled.
+2025-07-10 18:07:44,093 INFO: Loss [gan_loss] enabled.
+2025-07-10 18:07:44,094 INFO: Loss [wavelet-guided] enabled.
+2025-07-10 18:07:44,094 INFO: Using model [image].
+2025-07-10 18:07:44,338 INFO: [1;32mResuming training from epoch: 351, iter: 120000[0m
+2025-07-10 18:07:51,325 INFO: AMP enabled with BF16.
+2025-07-10 18:07:51,326 INFO: [1;32mStart training from epoch: 351, iter: 120000[0m
+2025-07-10 18:08:59,032 INFO: [1;32mInterrupted, saving latest models.[0m

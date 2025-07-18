@@ -1,0 +1,6 @@
+{
+    "tile_size": 576,
+    "name": "plksr_4x_55k_f16",
+    "description": "PLKSR 4x model, 55k checkpoint, 576x576 tile size"
+  }
+  

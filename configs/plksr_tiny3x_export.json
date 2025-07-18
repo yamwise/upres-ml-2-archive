@@ -1,0 +1,7 @@
+{
+    "tile_size": 576,
+    "name": "plksr_tiny_3x_fp16",
+    "description": "PLKSR_tiny 3x model, 265k checkpoint weights, 576x576 tile size"
+}
+  
+  

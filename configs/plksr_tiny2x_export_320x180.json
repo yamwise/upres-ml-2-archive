@@ -1,0 +1,7 @@
+{
+    "tile_size": [180,320],
+    "name": "plksr_tiny_2x_fp16_320x180",
+    "description": "PLKSR_tiny 2x model, 120k checkpoint weights, 320x180 tile size"
+}
+  
+  
