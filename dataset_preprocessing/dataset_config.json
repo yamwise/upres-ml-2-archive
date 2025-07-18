@@ -1,0 +1,47 @@
+{
+    "--comment--": "proteus models!",
+    "datasetDirs": [
+        {
+            "name": "aligned_topaz_proteus_1_5x",
+            "hq": "1_5x",
+            "lq": "1_0x",
+            "labels": ["aligned_topaz_proteus"]
+        },
+        {
+            "name": "aligned_topaz_proteus_2_0x",
+            "hq": "2_0x",
+            "lq": "1_0x",
+            "labels": ["aligned_topaz_proteus"]
+        },
+        {
+            "name": "aligned_topaz_proteus_2_5x",
+            "hq": "2_5x",
+            "lq": "1_0x",
+            "labels": ["aligned_topaz_proteus"]
+        },
+        {
+            "name": "aligned_topaz_proteus_3_0x",
+            "hq": "3_0x",
+            "lq": "1_0x",
+            "labels": ["aligned_topaz_proteus"]
+        },
+        {
+            "name": "aligned_topaz_proteus_3_5x",
+            "hq": "3_5x",
+            "lq": "1_0x",
+            "labels": ["aligned_topaz_proteus"]
+        },
+        {
+            "name": "aligned_topaz_proteus_4_0x",
+            "hq": "4_0x",
+            "lq": "1_0x",
+            "labels": ["aligned_topaz_proteus"]
+        },        
+        {
+            "name": "aligned_topaz_proteus_4_5x",
+            "hq": "4_5x",
+            "lq": "1_0x",
+            "labels": ["aligned_topaz_proteus"]
+        }
+    ]
+}
